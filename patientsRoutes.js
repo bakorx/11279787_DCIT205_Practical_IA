@@ -1,12 +1,16 @@
-const express = require('express');
-const router = express.Router();
-const { createPatient, updatePatient } = require('../controllers/patientController');
+   
+     const express = require('express');
+     const router = express.Router();
+     const patientController = require('../controllers/patientController');
 
+  
+     router.post('/patients', patientController.registerPatient);
 
-router.post('/', createPatient);
+  
+     router.post('/encounters', patientController.startEncounter);
 
+   
+     router.post('/vitals', patientController.submitVitals);
 
-router.put('/:patientId', updatePatient);
-
-module.exports = router;
-
+     module.exports = router;
+     
