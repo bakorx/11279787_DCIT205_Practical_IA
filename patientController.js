@@ -18,5 +18,6 @@
        registerPatient,
        startEncounter,
        submitVitals,
+    
      };
      
